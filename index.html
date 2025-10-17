@@ -5,62 +5,268 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio - Luis Alberto Rizo Gutierrez</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Header con navegación -->
     <header>
-        <h1 id="name">Luis Alberto Rizo Gutierrez</h1>
-        <p id="title">Ingeniero en Computación | Desarrollador de Software </p>
-        <button onclick="toggleLanguage()">🌐 Eng|Esp</button>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Portfolio</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+                <button class="language-toggle" onclick="toggleLanguage()">🌐 Eng/Esp</button>
+            </div>
+        </nav>
+        
+        <div class="hero">
+            <div class="hero-content">
+                <h1 id="name">Luis Alberto Rizo Gutierrez</h1>
+                <p id="title" class="subtitle">Ingeniero en Computación | Desarrollador de Software</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary" id="view-projects-btn">Ver Proyectos</a>
+                    <a href="#contact" class="btn secondary" id="contact-me-btn">Contactar</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/profile/profile.jpeg" alt="Luis Alberto Rizo Gutierrez" class="profile-image">
+            </div>
+        </div>
     </header>
 
+    <!-- Sección Sobre Mí -->
     <section id="about">
-        <h2 id="about-title">Sobre mí</h2>
-        <p id="about-text">Recién egresado en Ingenieria en Computación, con experiencia en proyectos académicos y personales en desarrollo de software y mantenimiento de sistemas. Apasionado por la tecnología y el aprendizaje contínuo.</p>
+        <div class="container">
+            <h2 id="about-title" class="section-title">Sobre mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p id="about-text">Recién egresado en Ingenieria en Computación, con experiencia en proyectos académicos y personales en desarrollo de software y mantenimiento de sistemas. Apasionado por la tecnología y el aprendizaje contínuo.</p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Ingeniero en Computación</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-code"></i>
+                            <span>Desarrollador Full Stack</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-rocket"></i>
+                            <span>+3 Años de Experiencia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Sección Habilidades -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Herramientas</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Raspberry Pi</span>
+                        <span class="skill-tag">Selenium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
     <section id="projects">
-        <h2 id="projects-title">Proyectos</h2>
+        <div class="container">
+            <h2 id="projects-title" class="section-title">Proyectos</h2>
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-assistive-listening-systems"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 id="p1-title">Prototipo Voz–Braille</h3>
+                        <p id="p1-desc">Dispositivo basado en Raspberry Pi 4 para traducción bidireccional de voz a Braille y Braille a voz, orientado a personas sordociegas.</p>
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>Raspberry Pi</span>
+                            <span>GPIO</span>
+                        </div>
+                        <p id="p1-role" class="project-role"><strong>Rol:</strong> Desarrollo de software y control de hardware, integración de módulos de traducción y creación de menú interactivo con botones físicos.</p>
+                    </div>
+                </div>
 
-        <div class="project">
-            <h3 id="p1-title">Prototipo Voz–Braille</h3>
-            <p id="p1-desc">Dispositivo basado en Raspberry Pi 4 para traducción bidireccional de voz a Braille y Braille a voz, orientado a personas sordociegas.</p>
-            <p><strong>Tecnologías:</strong> Python, Raspberry Pi 4, GPIO, Motores paso a paso, STT, TTS</p>
-            <p id="p1-role"><strong>Rol:</strong> Desarrollo de software y control de hardware, integración de módulos de traducción y creación de menú interactivo con botones físicos.</p>
-        </div>
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 id="p2-title">Plataforma en línea para cuestionarios educativos</h3>
+                        <p id="p2-desc">Desarrollo de una plataforma web para la creación de cuestionarios de estudio dirigidos a personas que desean obtener su certificado de primaria y secundaria.</p>
+                        <div class="tech-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+                        <p id="p2-role" class="project-role"><strong>Rol:</strong> Desarrollo de interfaz, lógica de cuestionarios y gestión de base de datos.</p>
+                        <p class="project-note"><em>(Código no disponible)</em></p>
+                    </div>
+                </div>
 
-        <div class="project">
-            <h3 id="p2-title">Plataforma en línea para cuestionarios educativos</h3>
-            <p id="p2-desc">Desarrollo de una plataforma web para la creación de cuestionarios de estudio dirigidos a personas que desean obtener su certificado de primaria y secundaria.</p>
-            <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
-            <p id="p2-role"><strong>Rol:</strong> Desarrollo de interfaz, lógica de cuestionarios y gestión de base de datos.</p>
-            <p><em>(Código no disponible)</em></p>
-        </div>
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 id="p3-title">Automatización de reportes institucionales</h3>
+                        <p id="p3-desc">Implementación de un programa en Python para automatizar la descarga y organización de reportes institucionales, reduciendo tiempos de procesamiento manual.</p>
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>OpenPyXL</span>
+                            <span>Selenium</span>
+                        </div>
+                        <p id="p3-role" class="project-role"><strong>Rol:</strong> Desarrollo de scripts de automatización, procesamiento de datos y generación de reportes en Excel.</p>
+                        <a href="https://github.com/RizoLuiss/datos-tutores" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> Ver código en GitHub
+                        </a>
+                    </div>
+                </div>
 
-        <div class="project">
-            <h3 id="p3-title">Automatización de reportes institucionales</h3>
-            <p id="p3-desc">Implementación de un programa en Python para automatizar la descarga y organización de reportes institucionales, reduciendo tiempos de procesamiento manual.</p>
-            <p><strong>Tecnologías:</strong> Python, Pandas, OpenPyXL, Selenium</p>
-            <p id="p3-role"><strong>Rol:</strong> Desarrollo de scripts de automatización, procesamiento de datos y generación de reportes en Excel.</p>
-            <a href="https://github.com/RizoLuiss/datos-tutores" target="_blank">Ver código en GitHub</a>
-        </div>
+                <!-- Proyecto 4 - Sistema de Inventario -->
+                <div class="project-card featured">
+                    
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 id="p4-title">Sistema de inventario para gimnasio</h3>
+                        <p id="p4-desc">Aplicación para gestionar el inventario de un gimnasio, incluyendo control de productos, registro de entradas y salidas, y control de usuarios.</p>
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>MySQL</span>
+                            <span>Tkinter</span>
+                        </div>
+                        <p id="p4-role" class="project-role"><strong>Rol:</strong> Desarrollo de interfaz y funcionalidades de control de stock.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/RizoLuiss/gym-inventory-system" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Ver código
+                            </a>
+                            <a href="#" class="project-link" onclick="openGallery()">
+                                <i class="fas fa-images"></i> Ver imágenes
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="project">
-            <h3 id="p4-title">Sistema de inventario para gimnasio <em>(En desarrollo)</em></h3>
-            <p id="p4-desc">Aplicación para gestionar el inventario de un gimnasio, incluyendo control de productos, registro de entradas y salidas, y control de usuarios.</p>
-            <p><strong>Tecnologías:</strong> Python, MySQL</p>
-            <p id="p4-role"><strong>Rol:</strong> Desarrollo de interfaz y funcionalidades de control de stock.</p>
-        </div>
+                <!-- Modal/Carrusel -->
+                <div id="gallery-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeGallery()">&times;</span>
+                        <h3>Galería - Sistema de Inventario</h3>
+                        
+                        <div class="gallery-container">
+                            <div class="gallery-slide">
+                                <img src="images/project-inventario/login.jpg" alt="Interfaz de inicio de sesión">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/project-inventario/principal.jpg" alt="Interfaz principal del sistema">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/project-inventario/movimientos.jpg" alt="Registro de movimientos">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/project-inventario/productos.jpg" alt="Gestión de productos">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/project-inventario/reportes.jpg" alt="Reportes del sistema">
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-controls">
+                            <button class="gallery-btn" onclick="prevSlide()">❮ Anterior</button>
+                            <span class="slide-counter">
+                                <span id="current-slide">1</span> / <span id="total-slides">5</span>
+                            </span>
+                            <button class="gallery-btn" onclick="nextSlide()">Siguiente ❯</button>
+                        </div>
+                        
+                        <div class="gallery-thumbnails">
+                            <img src="images/project-inventario/login.jpg" alt="Miniatura 1" onclick="goToSlide(0)" class="thumbnail active">
+                            <img src="images/project-inventario/principal.jpg" alt="Miniatura 2" onclick="goToSlide(1)" class="thumbnail">
+                            <img src="images/project-inventario/movimientos.jpg" alt="Miniatura 3" onclick="goToSlide(2)" class="thumbnail">
+                            <img src="images/project-inventario/productos.jpg" alt="Miniatura 4" onclick="goToSlide(3)" class="thumbnail">
+                            <img src="images/project-inventario/reportes.jpg" alt="Miniatura 5" onclick="goToSlide(4)" class="thumbnail">
+                        </div>
+                    </div>
+                </div>
     </section>
 
+    <!-- Sección Contacto -->
     <section id="contact">
-        <h2 id="contact-title">Contacto</h2>
-        <p>📧 <a href="mailto:rizogutierrezluiss@gmail.com">rizogutierrezluiss@gmail.com</a></p>
-        <p>🔗 <a href="https://github.com/RizoLuiss" target="_blank">GitHub</a></p>
-        <p>🔗 <a href="https://www.linkedin.com/in/luis-alberto-rizo-gutierrez-44b284360" target="_blank">LinkedIn</a></p>
+        <div class="container">
+            <h2 id="contact-title" class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p id="p1Talk">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+                    <div class="contact-links">
+                        <a href="mailto:rizogutierrezluiss@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i> rizogutierrezluiss@gmail.com
+                        </a>
+                        <a href="https://github.com/RizoLuiss" target="_blank" class="contact-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/luis-alberto-rizo-gutierrez-44b284360" target="_blank" class="contact-link">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p id="footer">© 2025 Luis Alberto Rizo Gutierrez - Portafolio</p>
+        <div class="container">
+            <p id="footer">© 2025 Luis Alberto Rizo Gutierrez - Portafolio</p>
+        </div>
     </footer>
 
     <script>
@@ -71,6 +277,10 @@
                 title: "Ingeniero en Computación | Desarrollador de Software",
                 aboutTitle: "Sobre mí",
                 aboutText: "Recién egresado en Ingenieria en Computación, con experiencia en proyectos académicos y personales en desarrollo de software y mantenimiento de sistemas. Apasionado por la tecnología y el aprendizaje contínuo.",
+                skillsTitle: "Habilidades Técnicas",
+                frontendTitle: "Frontend",
+                backendTitle: "Backend",
+                toolsTitle: "Herramientas",
                 projectsTitle: "Proyectos",
                 p1Title: "Prototipo Voz–Braille",
                 p1Desc: "Dispositivo basado en Raspberry Pi 4 para traducción bidireccional de voz a Braille y Braille a voz, orientado a personas sordociegas.",
@@ -81,16 +291,34 @@
                 p3Title: "Automatización de reportes institucionales",
                 p3Desc: "Implementación de un programa en Python para automatizar la descarga y organización de reportes institucionales, reduciendo tiempos de procesamiento manual.",
                 p3Role: "Rol: Desarrollo de scripts de automatización, procesamiento de datos y generación de reportes en Excel.",
-                p4Title: "Sistema de inventario para gimnasio (En desarrollo)",
+                p4Title: "Sistema de inventario para gimnasio",
                 p4Desc: "Aplicación para gestionar el inventario de un gimnasio, incluyendo control de productos, registro de entradas y salidas, y control de usuarios.",
                 p4Role: "Rol: Desarrollo de interfaz y funcionalidades de control de stock.",
                 contactTitle: "Contacto",
-                footer: "© 2025 Luis Alberto Rizo Gutierrez - Portafolio"
+                footer: "© 2025 Luis Alberto Rizo Gutierrez - Portafolio",
+                // Nuevas traducciones agregadas
+                viewProjects: "Ver Proyectos",
+                contactMe: "Contactar",
+                p1Talk: "¿Tienes un proyecto en mente? ¡Hablemos!",
+                computerEngineer: "Ingeniero en Computación",
+                fullStackDeveloper: "Desarrollador Full Stack",
+                yearsExperience: "+3 Años de Experiencia",
+                seeCode: "Ver código en GitHub",
+                codeNotAvailable: "(Código no disponible)",
+                navAbout: "Sobre mí",
+                navSkills: "Habilidades",
+                navProjects: "Proyectos", 
+                navContact: "Contacto",
+                viewImages: "Ver imágenes"
             },
             en: {
                 title: "Computer Engineer | Software Developer",
                 aboutTitle: "About Me",
                 aboutText: "Recent Computer Engineering graduate with experience in academic and personal projects in software development and systems maintenance. Passionate about technology and continuous learning.",
+                skillsTitle: "Technical Skills",
+                frontendTitle: "Frontend",
+                backendTitle: "Backend",
+                toolsTitle: "Tools",
                 projectsTitle: "Projects",
                 p1Title: "Voice–Braille Prototype",
                 p1Desc: "Device based on Raspberry Pi 4 for bidirectional translation of voice to Braille and Braille to voice, aimed at deafblind people.",
@@ -101,19 +329,52 @@
                 p3Title: "Institutional Reports Automation",
                 p3Desc: "Implementation of a Python program to automate the download and organization of institutional reports, reducing manual processing time.",
                 p3Role: "Role: Development of automation scripts, data processing, and Excel report generation.",
-                p4Title: "Gym Inventory System (In progress)",
+                p4Title: "Gym Inventory System",
                 p4Desc: "Application to manage gym inventory, including product control, entry/exit records, and user management.",
                 p4Role: "Role: Development of interface and stock control functionalities.",
                 contactTitle: "Contact",
-                footer: "© 2025 Luis Alberto Rizo Gutierrez - Portfolio"
+                footer: "© 2025 Luis Alberto Rizo Gutierrez - Portfolio",
+                // Nuevas traducciones agregadas
+                viewProjects: "View Projects",
+                contactMe: "Contact Me",
+                p1Talk: "Got a project in mind? Let's talk!",
+                computerEngineer: "Computer Engineer",
+                fullStackDeveloper: "Full Stack Developer",
+                yearsExperience: "+3 Years of Experience",
+                seeCode: "View code on GitHub",
+                codeNotAvailable: "(Code not available)",
+                navAbout: "About Me",
+                navSkills: "Skills", 
+                navProjects: "Projects",
+                navContact: "Contact",
+                viewImages: "View images"
             }
         };
 
         function toggleLanguage() {
             currentLang = currentLang === "es" ? "en" : "es";
+            
+            // Actualizar navegación
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks[0].textContent = texts[currentLang].navAbout;
+            navLinks[1].textContent = texts[currentLang].navSkills;
+            navLinks[2].textContent = texts[currentLang].navProjects;
+            navLinks[3].textContent = texts[currentLang].navContact;
+
+            // Actualizar todos los textos
             document.getElementById("title").innerText = texts[currentLang].title;
             document.getElementById("about-title").innerText = texts[currentLang].aboutTitle;
             document.getElementById("about-text").innerText = texts[currentLang].aboutText;
+            document.getElementById("view-projects-btn").innerText = texts[currentLang].viewProjects;
+            document.getElementById("contact-me-btn").innerText = texts[currentLang].contactMe;
+
+            // Actualizar sección de habilidades
+            document.querySelector("#skills .section-title").innerText = texts[currentLang].skillsTitle;
+            document.querySelector(".skill-category:nth-child(1) h3").innerText = texts[currentLang].frontendTitle;
+            document.querySelector(".skill-category:nth-child(2) h3").innerText = texts[currentLang].backendTitle;
+            document.querySelector(".skill-category:nth-child(3) h3").innerText = texts[currentLang].toolsTitle;
+            
+            // Actualizar proyectos
             document.getElementById("projects-title").innerText = texts[currentLang].projectsTitle;
             document.getElementById("p1-title").innerText = texts[currentLang].p1Title;
             document.getElementById("p1-desc").innerText = texts[currentLang].p1Desc;
@@ -127,10 +388,108 @@
             document.getElementById("p4-title").innerText = texts[currentLang].p4Title;
             document.getElementById("p4-desc").innerText = texts[currentLang].p4Desc;
             document.getElementById("p4-role").innerText = texts[currentLang].p4Role;
+            document.getElementById("p1Talk").innerText = texts[currentLang].p1Talk;
+            
+            // Actualizar botones y textos dinámicos
+            document.querySelector('a[href="#projects"]').innerText = texts[currentLang].viewProjects;
+            document.querySelector('a[href="#contact"]').innerText = texts[currentLang].contactMe;
+            document.querySelector('.highlight:nth-child(1) span').innerText = texts[currentLang].computerEngineer;
+            document.querySelector('.highlight:nth-child(2) span').innerText = texts[currentLang].fullStackDeveloper;
+            document.querySelector('.highlight:nth-child(3) span').innerText = texts[currentLang].yearsExperience;
+            
+            // Actualizar enlaces de proyectos
+            const githubLinks = document.querySelectorAll('.project-link');
+            githubLinks.forEach(link => {
+                if (link.textContent.includes('GitHub') || link.textContent.includes('código')) {
+                    link.innerHTML = `<i class="fab fa-github"></i> ${texts[currentLang].seeCode}`;
+                }
+                if (link.textContent.includes('imágenes') || link.textContent.includes('images')) {
+                    link.innerHTML = `<i class="fas fa-images"></i> ${texts[currentLang].viewImages}`;
+                }
+            });
+            
+            // Actualizar texto de código no disponible
+            const notAvailable = document.querySelector('.project-note');
+            if (notAvailable) {
+                notAvailable.textContent = texts[currentLang].codeNotAvailable;
+            }
+            
             document.getElementById("contact-title").innerText = texts[currentLang].contactTitle;
             document.getElementById("footer").innerText = texts[currentLang].footer;
         }
+
+        // Variables globales para el carrusel
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.gallery-slide');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const totalSlides = slides.length;
+
+        // Funciones del carrusel
+        function openGallery() {
+            document.getElementById('gallery-modal').style.display = 'block';
+            showSlide(currentSlide);
+            document.body.style.overflow = 'hidden'; // Previene scroll en el fondo
+        }
+
+        function closeGallery() {
+            document.getElementById('gallery-modal').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restaura scroll
+        }
+
+        function showSlide(n) {
+            // Oculta todas las slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            
+            // Ajusta el índice si se pasa de los límites
+            if (n >= totalSlides) currentSlide = 0;
+            if (n < 0) currentSlide = totalSlides - 1;
+            
+            // Muestra la slide actual
+            slides[currentSlide].classList.add('active');
+            thumbnails[currentSlide].classList.add('active');
+            
+            // Actualiza el contador
+            document.getElementById('current-slide').textContent = currentSlide + 1;
+            document.getElementById('total-slides').textContent = totalSlides;
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+
+        function goToSlide(n) {
+            currentSlide = n;
+            showSlide(currentSlide);
+        }
+
+        // Cerrar modal al hacer clic fuera del contenido
+        window.onclick = function(event) {
+            const modal = document.getElementById('gallery-modal');
+            if (event.target === modal) {
+                closeGallery();
+            }
+        }
+
+        // Navegación con teclado
+        document.addEventListener('keydown', function(event) {
+            const modal = document.getElementById('gallery-modal');
+            if (modal.style.display === 'block') {
+                if (event.key === 'ArrowLeft') {
+                    prevSlide();
+                } else if (event.key === 'ArrowRight') {
+                    nextSlide();
+                } else if (event.key === 'Escape') {
+                    closeGallery();
+                }
+            }
+        });
     </script>
 </body>
 </html>
-
